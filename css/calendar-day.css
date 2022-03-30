@@ -1,0 +1,129 @@
+.calendarDay {
+  /*  border: 1px solid red; */
+
+  /* position */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  /* Posicionamiento del seudoelemento */
+  /* position: relative; */
+
+  /* Para que me siga los dias de la semana */
+  position: sticky;
+  inset-block-start: 0;
+  background: var(--white);
+
+  /* margins and borders*/
+  margin: 0;
+  border-block-end: 1px solid currentColor;
+}
+
+.today {
+  /* position */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  text-align: center;
+
+  /* Posicionamiento del seudoelemento */
+  /* position: relative; */
+
+  /* Para que me siga los dias de la semana */
+  position: sticky;
+  inset-block-start: 0;
+  background: var(--white);
+  z-index: 1;
+
+  /* margins and borders*/
+  margin: 0;
+  border-block-end: 1px solid currentColor;
+}
+
+.calendarDay a,
+.today a {
+  color: currentColor;
+
+  text-decoration: none;
+
+  /* focus with tab */
+  outline: none;
+}
+
+.calendarDay a:hover span:nth-of-type(2),
+.calendarDay a:focus span:nth-of-type(2),
+.today a:hover span:nth-of-type(2),
+.today a:focus span:nth-of-type(2) {
+  background: var(--gray10);
+  /* line-height: 2.75rem; */
+}
+
+.calendarDay.is-selected a:hover span:nth-of-type(2),
+.calendarDay.is-selected a:focus span:nth-of-type(2),
+.today.is-selected a:hover span:nth-of-type(2),
+.today.is-selected a:focus span:nth-of-type(2) {
+  background: var(--blue30);
+  /* line-height: 2.75rem; */
+}
+
+.calendarDay span:nth-of-type(1),
+.today span:nth-of-type(1) {
+  font: var(--body1-regular);
+}
+
+.calendarDay span:nth-of-type(2),
+.today span:nth-of-type(2) {
+  /* position */
+  display: inline-block; /* Para que me tome el ancho (inline) */
+  inline-size: 2.75rem;
+
+  /* borders */
+  border-radius: 50%;
+
+  /* fonts */
+  font: var(--subtitle-subtitle1);
+
+  /* height */
+  line-height: 2.75rem;
+}
+
+.calendarDay::before,
+.today::before {
+  /* position del seudoelemento*/
+  position: absolute;
+  inset-block-end: 0; /* left */
+  inset-inline-start: 0; /* bottom */
+
+  /*  */
+  content: '';
+  inline-size: 1px;
+  block-size: 2rem;
+  background: currentColor;
+}
+
+.calendarDay.is-selected span:nth-of-type(1),
+.today.is-selected span:nth-of-type(1) {
+  color: var(--blue10);
+}
+
+.calendarDay.is-selected span:nth-of-type(2),
+.today.is-selected span:nth-of-type(2) {
+  background: var(--blue10);
+  color: var(--white);
+}
+
+.calendar-day {
+  display: grid;
+
+  /* wight */
+  grid-template-columns: auto repeat(1, minmax(var(--mininlineSize), var(--maxinlineSize)));
+
+  /* height */
+  grid-template-rows: 7rem repeat(24, minmax(var(--minblockSize), var(--maxblockSize)));
+
+  padding-inline: var(--paddingInline);
+
+  /* Defición de una height-min provisional */
+  min-block-size: 700px;
+}

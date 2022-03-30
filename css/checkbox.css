@@ -1,0 +1,45 @@
+.checkbox {
+  /* sizes */
+  /* max-inline-size: 12.25rem; */
+  inline-size: 12.25rem;
+
+  /* border: 1px solid red; */
+}
+
+.header-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-checkbox {
+  font: var(--body1-medium);
+}
+
+.list-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-names {
+  display: flex;
+}
+
+.list-names .icon-IconcheckSquare,
+.list-names .icon-Iconcheck {
+  font-size: 1.25rem;
+  padding-inline-start: 4px;
+}
+
+.list-names p {
+  margin: 0;
+  font: var(--body1-regular);
+  padding-inline-start: 4px;
+}

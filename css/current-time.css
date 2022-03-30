@@ -1,0 +1,42 @@
+.currentTime {
+  /* position */
+  position: absolute;
+  inset-inline-start: 300px;
+  inset-block-start: 300px;
+  /* sizes */
+  block-size: 2px;
+  inline-size: 5rem;
+  /* color */
+  background: var(--red10);
+
+  /* border */
+  /* border: 1px solid red; */
+}
+
+.currentTimeday {
+  /* sizes */
+  block-size: 2px;
+
+  /* color */
+  background: var(--red10);
+}
+
+.currentTime::before,
+.currentTimeday::before {
+  content: '';
+
+  display: block;
+
+  /* sizes */
+  inline-size: 1rem;
+  block-size: 1rem;
+
+  /* color */
+  background: var(--red10);
+
+  /* border */
+  border-radius: 50%;
+
+  /* posicionar */
+  transform: translateY(-50%);
+}

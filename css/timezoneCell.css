@@ -1,0 +1,45 @@
+.timezoneCell {
+  /* display */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  /* position */
+  position: sticky;
+  /* top */
+  inset-block-start: 0;
+
+  /* font */
+  font: var(--body3-regular);
+
+  /* padding and margin */
+  padding-inline-end: 1rem;
+
+  /* Se va mantener en la misma linea */
+  white-space: nowrap;
+
+  /* Esconder la esquina izquierda */
+  background: var(--white);
+  z-index: 2;
+
+  /* lines */
+  /* border: 1px solid red; */
+}
+
+.timezoneCell::before {
+  content: '';
+  /* Position */
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+
+  /* sizes */
+  inline-size: 0.5rem;
+  block-size: 1px;
+
+  /* colors */
+  background: var(--gray20);
+
+  /* border */
+  /* border: 1px solid red; */
+}

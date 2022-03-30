@@ -1,0 +1,34 @@
+/*------------ tips --------------- */
+/*La decisión de elegir flex
+  es por que si deseamos poner + textos
+  siempre va la separación del gap.   */
+
+.task {
+  /*  border: 1px solid red; */
+  /* Position */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  /* Fonts */
+  font: var(--body2-medium);
+  color: var(--white);
+
+  /* margin and padding */
+  padding-inline: 1rem;
+  padding-block: 0.625rem;
+
+  /* Colors */
+  background: var(--blue10);
+
+  /* borders */
+  border-radius: 0.25rem;
+
+  /*  others*/
+  overflow: hidden;
+}
+
+.task p {
+  margin: 0;
+  white-space: nowrap;
+}

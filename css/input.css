@@ -1,0 +1,88 @@
+.input {
+  /*  border: 1px solid red; */
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input i {
+  font-size: 1.5rem;
+}
+
+.input.is-outstanding input {
+  font: var(--subtitle-subtitle1);
+  /* border: 1px solid blue; */
+}
+
+.input-search {
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.input-search i {
+  font-size: 1rem;
+}
+
+.input-search .icon-Iconusers {
+  position: absolute;
+  left: 1rem;
+  /* top: 0.75rem; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-Iconusers .input-body {
+  display: flex;
+  flex: 1;
+  /* border: 1px solid green; */
+}
+
+.input input,
+.input textarea {
+  flex: 1;
+
+  /* fonts */
+  font: var(--body1-regular);
+
+  /* padding & margins */
+  padding-block: 0.625rem;
+  padding-inline: 0.75rem;
+
+  /* borders */
+  border: none;
+  border-radius: 0.25rem;
+
+  /* tabs */
+  outline: none;
+}
+
+.input-search input {
+  /* fonts */
+  font: var(--body1-regular);
+
+  /* padding & margins */
+  padding-block: 0.625rem;
+  padding-inline-start: 2.5rem;
+
+  /* borders */
+  border: none;
+  border-radius: 0.25rem;
+
+  /* tabs */
+  outline: none;
+}
+
+.input input:focus,
+.input input:hover,
+.input textarea:focus,
+.input textarea:hover,
+.input-search input:focus,
+.input-search input:hover {
+  background-color: var(--gray10);
+}
+
+.input input:focus,
+.input textarea:focus {
+  /* simula el borders con box-shadow */
+  box-shadow: 0 2px 0 var(--blue10);
+}

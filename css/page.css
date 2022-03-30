@@ -1,0 +1,32 @@
+.page {
+  /* position */
+  display: grid;
+  grid-template-columns: 15.25rem 1fr;
+  grid-template-rows: 6rem 1fr;
+  grid-template-areas: 'header header' 'sidebar main';
+  /* size */
+  block-size: 100vh;
+}
+
+.page .header {
+  /* position */
+  grid-area: header;
+
+  /* bugear */
+  /* border: 5px solid red; */
+}
+
+.page .sidebar {
+  /* position */
+  grid-area: sidebar;
+
+  /* bugear */
+  /* border: 5px solid blue; */
+}
+
+.page .calendar {
+  grid-area: main;
+
+  /* borders */
+  /* border: 5px solid yellow; */
+}

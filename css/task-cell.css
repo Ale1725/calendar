@@ -1,0 +1,39 @@
+/* CurrentColor - Herencia de color */
+
+.taskCell,
+.taskCellDay {
+  /* border: 1px solid currentColor; */
+
+  border-inline-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+
+  /* separations */
+  padding: 0.25rem;
+}
+
+/* .taskCell:nth-child(8n) {
+  border-inline-end: 1px solid currentColor;
+} */
+
+.taskCellDay {
+  padding-block-start: 2.25rem;
+  padding-block-end: 2.25rem;
+}
+
+.taskCell.is-active::before {
+  content: '(sin titulo)';
+
+  /* Position */
+  display: block;
+
+  /* fonts */
+  font-size: small;
+
+  /* colors */
+  background: #c6dafc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  /* separations */
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
